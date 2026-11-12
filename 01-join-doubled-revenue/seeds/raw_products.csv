@@ -1,0 +1,23 @@
+product_id,product_name,category,list_price
+101,House Blend 250g,coffee,9.50
+102,Ethiopia Guji 250g,coffee,13.00
+103,Colombia Huila 250g,coffee,12.00
+104,Decaf 250g,coffee,10.50
+105,Espresso Roast 1kg,coffee,32.00
+106,Kenya AA 250g,coffee,14.50
+107,Earl Grey 100g,tea,7.00
+108,Sencha 100g,tea,9.00
+109,Chai Blend 100g,tea,8.00
+110,Rooibos 100g,tea,6.50
+111,Pour-over Dripper,equipment,24.00
+112,Paper Filters x100,equipment,5.50
+113,Hand Grinder,equipment,59.00
+114,Gooseneck Kettle,equipment,45.00
+115,French Press,equipment,29.00
+116,Almond Biscotti,snacks,4.50
+117,Dark Chocolate Bar,snacks,3.50
+118,Oat Cookies,snacks,4.00
+119,Shortbread Tin,snacks,8.50
+120,Logo Mug,merch,12.00
+121,Tote Bag,merch,15.00
+122,Travel Cup,merch,18.00

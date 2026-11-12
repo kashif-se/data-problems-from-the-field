@@ -1,0 +1,31 @@
+name: coffee_shop
+version: "1.0.0"
+profile: coffee_shop
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+models:
+  coffee_shop:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  coffee_shop:
+    raw_orders:
+      +column_types:
+        ordered_at: timestamp
+        order_total: decimal(10,2)
+    raw_order_items:
+      +column_types:
+        unit_price: decimal(10,2)
+    raw_payments:
+      +column_types:
+        paid_at: timestamp
+        amount: decimal(10,2)
+    raw_products:
+      +column_types:
+        list_price: decimal(10,2)

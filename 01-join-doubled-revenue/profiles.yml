@@ -1,0 +1,7 @@
+coffee_shop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: coffee_shop.duckdb
+      threads: 4
