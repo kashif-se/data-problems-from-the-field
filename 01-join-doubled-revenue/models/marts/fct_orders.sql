@@ -1,17 +1,13 @@
--- One row per order.
--- Category added so the dashboard can filter revenue by product category.
+-- Grain: one row per completed order.
+-- Don't join order items in here. An order with three items would become three
+-- rows, and order_total would be counted three times. Use fct_order_items for
+-- anything per product or per category.
 
 select
-    o.order_id,
-    o.customer_id,
-    o.ordered_at,
-    date_trunc('month', o.ordered_at) as order_month,
-    o.status,
-    p.category,
-    o.order_total
-from {{ ref('stg_orders') }} o
-left join {{ ref('stg_order_items') }} i
-    on o.order_id = i.order_id
-left join {{ ref('stg_products') }} p
-    on i.product_id = p.product_id
-where o.status = 'completed'
+    order_id,
+    customer_id,
+    ordered_at,
+    date_trunc('month', ordered_at) as order_month,
+    order_total
+from {{ ref('stg_orders') }}
+where status = 'completed'

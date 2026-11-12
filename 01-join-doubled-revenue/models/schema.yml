@@ -31,8 +31,16 @@ models:
     description: One row per completed order.
     columns:
       - name: order_id
-        tests: [not_null]
+        tests: [unique, not_null]
       - name: order_total
+        tests: [not_null]
+
+  - name: fct_order_items
+    description: One row per line on a completed order.
+    columns:
+      - name: order_item_id
+        tests: [unique, not_null]
+      - name: category
         tests: [not_null]
 
   - name: monthly_revenue
